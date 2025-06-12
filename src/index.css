@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force body to not double-scroll */
+body {
+    overflow: hidden;
+    height: 100vh;
+  }
+  .Typewriter__cursor {
+    color: #00f0ff;
+    text-shadow: 0 0 6px #00f0ff;
+    font-weight: bold;
+  }
+  
