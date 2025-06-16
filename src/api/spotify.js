@@ -6,7 +6,6 @@ const clientSecret = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
 let token = "";
 let tokenExpiry = 0;
 
-// 🎯 Custom playlists for specific emotions
 const customPlaylists = {
   happy: {
     id: "37i9dQZF1EIfPJlPqfLhbI",
@@ -15,6 +14,10 @@ const customPlaylists = {
   excited: {
     id: "41Xbvx4P0iT5OwCMz0inaN",
     name: "Custom Excitement Boost ⚡",
+  },
+  reflective: {
+    id: "5jpKYt0ErjQ95a4vLmhLkC",
+    name: "Reflective Roots & Soul 🌿🎧",
   },
 };
 
@@ -45,7 +48,6 @@ export const searchPlaylistByEmotion = async (emotion) => {
   try {
     const token = await getSpotifyToken();
 
-    // 🧠 Check for hardcoded playlist first
     if (customPlaylists[emotion]) {
       return customPlaylists[emotion];
     }
